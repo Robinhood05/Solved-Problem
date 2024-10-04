@@ -1,11 +1,16 @@
-vector < int > FindUnion(int arr1[], int arr2[], int n, int m) {
-  set < int > s;
-  vector < int > Union;
-  for (int i = 0; i < n; i++)
-    s.insert(arr1[i]);
-  for (int i = 0; i < m; i++)
-    s.insert(arr2[i]);
-  for (auto & it: s)
-    Union.push_back(it);
-  return Union;
-}
+int doUnion(vector<int> arr1, vector<int> arr2) {
+        // code here
+        set<int>s;
+        
+        for(int i=0 ; i<arr1.size(); i++){
+            s.insert(arr1[i]);
+        }
+        for(int i =0 ;i<arr2.size();i++){
+            s.insert(arr2[i]);
+        }
+        int count= 0;
+        for(auto c:s ){
+            count++;
+        }
+        return count;
+    }

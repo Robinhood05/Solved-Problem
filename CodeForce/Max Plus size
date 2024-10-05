@@ -1,0 +1,42 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+    int test;
+    cin >> test;
+
+    while (test--) {
+        int size;
+        cin >> size;
+        vector<int> arra(size);
+
+        vector<int> ans;   // For elements at even indices
+        vector<int> ans1;  // For elements at odd indices
+
+        for (int i = 0; i < size; i++) {
+            cin >> arra[i];
+        }
+
+        // Collect elements at even and odd indices
+        for (int i = 0; i < size; i++) {
+            if (i % 2 == 0) {
+                ans.push_back(arra[i]);
+            } else {
+                ans1.push_back(arra[i]);
+            }
+        }
+
+        // Find max element in each group
+        int max3 = ans.empty() ? 0 : *max_element(ans.begin(), ans.end());
+        int max4 = ans1.empty() ? 0 : *max_element(ans1.begin(), ans1.end());
+
+        // Calculate the sums
+        int sum1 = ans.size() + max3;
+        int sum2 = ans1.size() + max4;
+
+        // Print the maximum sum
+        cout << max(sum1, sum2) << endl;
+    }
+
+    return 0;
+}

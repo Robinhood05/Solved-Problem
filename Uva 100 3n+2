@@ -1,0 +1,43 @@
+#include <iostream>
+using namespace std;
+
+int cycle_length(int n) {
+    int length = 1;  
+    while (n != 1) {
+        if (n % 2 == 0) {
+            n /= 2;
+        } else {
+            n = 3 * n + 1;
+        }
+        length++;
+    }
+    return length;
+}
+
+int max_cycle_length(int i, int j) {
+    if (i > j) {
+        swap(i, j);
+    }
+
+    int max_length = 0;
+    for (int n = i; n <= j; n++) {
+        int current_length = cycle_length(n);
+        if (current_length > max_length) {
+            max_length = current_length;
+        }
+    }
+
+    return max_length;
+}
+
+int main() {
+    int i, j;
+    
+    
+    while (cin >> i >> j) {
+        int result = max_cycle_length(i, j);
+        cout << i << " " << j << " " << result << endl;
+    }
+
+    return 0;
+}

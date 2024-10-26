@@ -62,3 +62,5 @@ int main() {
 
     return 0;
 }
+
+//link: https://codeforces.com/contest/2027/problem/B

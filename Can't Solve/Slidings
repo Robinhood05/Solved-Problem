@@ -1,0 +1,67 @@
+from typing import List
+from collections import deque
+
+# def solution(grid: List[List[int]], row: int, col: int, n: int, m: int):
+
+test = int(input())
+
+while test > 0:
+    # Input for grid dimensions
+    n = int(input())  # number of rows
+    m = int(input())  # number of columns
+    
+    # Input for specific row and column (if you need it for your logic)
+    r = int(input())  # row
+    c = int(input())  # column
+    
+    # Creating the grid initialized with 0s
+    grid = [[0 for col in range(m)] for row in range(n)]
+    
+    # Print the grid (for testing purposes)
+    
+    grid[n][m] = 1
+    
+    shifted = 0;
+    
+    q = deque()
+    
+    #direction = [(-1,)]
+    
+    for i in range(n):
+        for j in range(m):
+            if grid[i][j] == '1':
+                q.append((grid[i][j],i,j))
+                break
+    
+    tolal_distance = 0
+    while q:
+        
+        cur_val,cur_row,cur_col = q.popleft();
+        
+        for i in range(cur_row, n):
+            
+            for j in range(cur_col,m):
+                
+                if(i==n-1):
+                    found = True
+                
+                else:
+                    total = total + ()
+                
+                
+                
+                
+                
+                
+   
+
+        
+        
+        
+    
+    
+    
+    #print(grid)
+    
+    # Decrease test counter
+    test -= 1

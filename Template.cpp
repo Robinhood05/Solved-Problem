@@ -1,8 +1,8 @@
 #include<iostream>
 #include<bits/stdc++.h>
-#define fast_io() ios_base::sync_with_stdio(false); cin.tie(nullptr);
-#define ll long long;
-#define pb push_back;
+#define fast_io() ios_base::sync_with_stdio(false); cin.tie(nullptr)
+#define ll long long
+#define pb push_back
 #define test(test) while (test--);
 #define FOR(i, start, end) for (int i = start; i < end; ++i)
 #define For(n) for (int i = 0; i < n; ++i)
